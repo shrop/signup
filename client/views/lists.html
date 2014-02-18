@@ -1,7 +1,18 @@
 <template name="lists">
   <div class="lists">
-    {{#each lists}}
-      <p>{{title}}</p>
-    {{/each}}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>List</th>
+          <th></th>
+        </tr>
+      </thead>
+      {{#each lists}}
+      <tr>
+        <td>{{title}}</td>
+        <td class=""><a class="btn btn-danger delete" href="#">Delete</a></td>
+      </tr>
+      {{/each}}
+    </table>
   </div>
 </template>
