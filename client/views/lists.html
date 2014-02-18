@@ -1,6 +1,11 @@
 <template name="lists">
   <div class="lists">
-    <a class="btn add-list pull-right" href="#">Add list</a>
+
+    <form class="main pull-right">
+      <input name="title" width="20" type="text" placeholder="List title"/>
+      <a class="btn add-list" href="#">Add list</a>
+    </form>
+
     <table class="table table-striped">
       <thead>
         <tr>
@@ -11,7 +16,8 @@
       {{#each lists}}
       <tr>
         <td><a href="#">{{title}}</a></td>
-        <td class=""><div class="btn-group"><a class="btn edit" href="#">Edit</a><a class="btn btn-danger delete" href="#">Delete</a></div></td>
+        <td class=""><div class="btn-group"><a class="btn edit-list" href="#">Edit</a></td>
+        <a class="btn btn-danger delete-list" href="#" id="{{_id}}">Delete</a></div></td>
       </tr>
       {{/each}}
     </table>
