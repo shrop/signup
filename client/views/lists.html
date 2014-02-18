@@ -1,5 +1,6 @@
 <template name="lists">
   <div class="lists">
+    <a class="btn add-list pull-right" href="#">Add list</a>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -10,8 +11,8 @@
       {{#each lists}}
       <tr>
         <td><a href="#">{{title}}</a></td>
-        <td class=""><a class="btn edit" href="#">Edit</a></td>
-        <td class=""><a class="btn btn-danger delete" href="#">Delete</a></td>
+        <td class=""><a class="btn edit-list" href="#">Edit</a></td>
+        <td class=""><a class="btn btn-danger delete-list" href="#">Delete</a></td>
       </tr>
       {{/each}}
     </table>
