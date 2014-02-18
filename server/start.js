@@ -1,7 +1,7 @@
 Meteor.startup(function () {
   if (Lists.find().count() === 0) {
     var now = new Date().getTime();
-    
+
     Lists.insert({
       title: "JavaScript Luncheon",
       location: "Innovation Tomorrow",
@@ -10,7 +10,7 @@ Meteor.startup(function () {
     });
 
     Lists.insert({
-      title: "JavaScript Luncheon",
+      title: "Meteor Meetup",
       location: "Innovation Tomorrow",
       date: "03/04/2014",
       submitted: now - 10 * 3600 * 1000,
