@@ -1,3 +1,10 @@
+function submitNewTitle(newTitle) {
+  if (newTitle.length > 0) {
+    Lists.insert({title: newTitle});
+    document.getElementById('title').value = null;
+  }
+}
+
 Template.lists.lists = function () {
   return Lists.find({});
 };
@@ -11,8 +18,13 @@ Template.lists.events({
     }
   },
   'click .add-list': function() {
-    var new_list_name = document.getElementById('title').value;
-    Lists.insert({title: new_list_name});
-    document.getElementById('title').value = null;
+    var newTitle = document.getElementById('title').value;
+    submitNewTitle(newTitle);
+  },
+  'keypress #title': function(e) {
+    var newTitle = document.getElementById('title').value;
+    if (e.which == 13) {
+      submitNewTitle(newTitle);
+    }
   }
 });
