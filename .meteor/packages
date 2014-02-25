@@ -7,7 +7,8 @@ standard-app-packages
 autopublish
 insecure
 preserve-inputs
-bootstrap
 accounts-password
-accounts-ui-bootstrap-dropdown
 iron-router
+semantic-ui
+collection2
+autoform
