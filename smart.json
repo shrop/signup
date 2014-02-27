@@ -3,6 +3,7 @@
     "iron-router": {},
     "semantic-ui": {},
     "autoform": {},
-    "collection2": {}
+    "collection2": {},
+    "apm": {}
   }
 }
